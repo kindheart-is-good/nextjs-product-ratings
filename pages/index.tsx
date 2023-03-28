@@ -1,3 +1,4 @@
+import { Layout } from '@/layout/P/Layout';
 import { Inter } from 'next/font/google';
 import { useState } from 'react';
 import { Button, Htag, P, Tag, Rating } from '../components';
@@ -9,7 +10,7 @@ export default function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(4);
 
   return (
-    <>
+    <Layout>
       <Htag tag="h1">Test</Htag>
       <Button appearance='primary' arrow='right'>Кнопка</Button>
       <Button appearance='ghost' arrow='down'>Кнопка</Button>
@@ -23,6 +24,6 @@ export default function Home(): JSX.Element {
       <Tag size='s' color='primary'>primary</Tag>
       <Rating rating={3} />
       <Rating rating={rating} isEditable setRating={setRating} />
-    </>
+    </Layout>
   );
 }
