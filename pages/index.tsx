@@ -5,7 +5,7 @@ import { withLayout } from "@/layout/Layout";
 import { Button, Htag, P, Tag, Rating } from "../components";
 import { MenuItem } from "@/interfaces/menu.interface";
 
-export function Home({ menu }: HomeProps): JSX.Element {
+function Home({ menu }: HomeProps): JSX.Element {
     const [rating, setRating] = useState<number>(4);
 
     return (
